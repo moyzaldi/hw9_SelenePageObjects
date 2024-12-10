@@ -1,7 +1,7 @@
 from demoqa_tests.resourse import RegistrationPage, TableResponsive
 
 firstName = 'Ivan'
-lastName = 'Ivanov'
+lastName = 'Sidorov'
 userEmail = 'test@test.com'
 userNumber = '1111111111'
 
