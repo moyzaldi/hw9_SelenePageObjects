@@ -20,9 +20,6 @@ state = 'Uttar Pradesh'
 city = 'Merrut'
 
 
-
-
-
 def test_type_registration_form(browser_settings):
     registration_page = RegistrationPage()
 
@@ -43,11 +40,6 @@ def test_type_registration_form(browser_settings):
 
     table_responsive = TableResponsive()
 
-    table_responsive.assert_text(firstName,lastName, userEmail, genter, userNumber, day, month, year, subjects, hobbies,
-                         images, currentAddress, state, city)
-
-
-
-
-
-
+    table_responsive.assert_text(firstName, lastName, userEmail, genter, userNumber, day, month, year, subjects,
+                                 hobbies,
+                                 images, currentAddress, state, city)
