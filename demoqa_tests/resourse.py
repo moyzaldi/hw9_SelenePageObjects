@@ -50,6 +50,7 @@ class RegistrationPage:
     def submit(self):
         browser.element('#submit').click()
 
+
 class TableResponsive:
 
     def assert_text(self, firstName, lastName, userEmail, genter, userNumber, day, month, year, subjects, hobbies,
