@@ -1,7 +1,7 @@
-import dataclasses
+from dataclasses import dataclass
 
 
-@dataclasses.dataclass
+@dataclass
 class User:
     first_name: str
     last_name: str
