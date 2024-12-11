@@ -36,7 +36,7 @@ class RegistrationPage:
         browser.element('#hobbiesWrapper').element(by.text(value)).click()
 
     def download_picture(self, path):
-        browser.element("#uploadPicture").send_keys(os.path.abspath(f"../images/{path}"))
+        browser.element("#uploadPicture").send_keys(os.path.abspath(f"../resources/images/{path}"))
 
     def fill_current_address(self, value):
         browser.element('#currentAddress').type(value)

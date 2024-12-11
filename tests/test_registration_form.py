@@ -1,4 +1,4 @@
-from demoqa_tests.resourse import RegistrationPage, TableResponsive
+from demoqa_tests.registration_page import RegistrationPage, TableResponsive
 
 firstName = 'Ann'
 lastName = 'Ivanova'
