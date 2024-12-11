@@ -1,45 +1,29 @@
+from demoqa_tests.data.users import  registered_user
 from demoqa_tests.registration_page import RegistrationPage, TableResponsive
-
-firstName = 'Ann'
-lastName = 'Ivanova'
-userEmail = 'test@test.com'
-userNumber = '1111111111'
-
-month = 'June'
-year = '2000'
-day = '01'
-
-genter = 'Female'
-hobbies = 'Reading'
-
-images = 'butterflies.png'
-currentAddress = 'Russia'
-subjects = 'Computer Science'
-
-state = 'Uttar Pradesh'
-city = 'Merrut'
 
 
 def test_type_registration_form(browser_settings):
     registration_page = RegistrationPage()
 
     registration_page.open()
-    registration_page.fill_first_name(firstName)
-    registration_page.fill_last_name(lastName)
-    registration_page.fill_email(userEmail)
-    registration_page.fill_genter(genter)
-    registration_page.fill_mobile(userNumber)
-    registration_page.fill_date_of_birth(month, year, day)
-    registration_page.fill_subjects(subjects)
-    registration_page.fill_hobbies(hobbies)
-    registration_page.download_picture(images)
-    registration_page.fill_current_address(currentAddress)
-    registration_page.fill_state(state)
-    registration_page.fill_city(city)
+    registration_page.fill_first_name(registered_user.first_name)
+    registration_page.fill_last_name(registered_user.last_name)
+    registration_page.fill_email(registered_user.user_email)
+    registration_page.fill_genter(registered_user.genter)
+    registration_page.fill_mobile(registered_user.user_number)
+    registration_page.fill_date_of_birth(registered_user.month, registered_user.year, registered_user.day)
+    registration_page.fill_subjects(registered_user.subjects)
+    registration_page.fill_hobbies(registered_user.hobbies)
+    registration_page.download_picture(registered_user.images)
+    registration_page.fill_current_address(registered_user.current_address)
+    registration_page.fill_state(registered_user.state)
+    registration_page.fill_city(registered_user.city)
     registration_page.submit()
 
     table_responsive = TableResponsive()
 
-    table_responsive.assert_text(firstName, lastName, userEmail, genter, userNumber, day, month, year, subjects,
-                                 hobbies,
-                                 images, currentAddress, state, city)
+    table_responsive.assert_text(registered_user.first_name, registered_user.last_name, registered_user.user_email,
+                                 registered_user.genter, registered_user.user_number, registered_user.day, registered_user.month,
+                                 registered_user.year, registered_user.subjects,
+                                 registered_user.hobbies,
+                                 registered_user.images, registered_user.current_address, registered_user.state, registered_user.city)
